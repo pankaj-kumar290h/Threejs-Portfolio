@@ -42,3 +42,16 @@ let barInterval = setInterval(() => {
     });
   }
 }, 30);
+
+///////////////question section
+const questions = [...document.querySelectorAll(".question")];
+
+questions.map((question) => {
+  question.addEventListener("click", () => {
+    let q_text = question.querySelector(".question__answare");
+    let status = question.querySelector(".question__status");
+
+    q_text.classList.toggle("open");
+    status.classList.toggle("question__status_open");
+  });
+});

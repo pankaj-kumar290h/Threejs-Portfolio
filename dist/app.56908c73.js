@@ -5520,10 +5520,10 @@ exports.default = exports.gsap = gsapWithCSS;
 
 var _gsap = _interopRequireDefault(require("gsap"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-var bar = document.querySelector(".loading__bar--inner");
-var count_number = document.querySelector(".loading__counter--number");
-var c = 0;
-var barInterval = setInterval(function () {
+const bar = document.querySelector(".loading__bar--inner");
+const count_number = document.querySelector(".loading__counter--number");
+let c = 0;
+let barInterval = setInterval(() => {
   bar.style.width = c + "%";
   count_number.innerText = c + "%";
   c++;
@@ -5561,6 +5561,17 @@ var barInterval = setInterval(function () {
     });
   }
 }, 30);
+
+///////////////question section
+const questions = [...document.querySelectorAll(".question")];
+questions.map(question => {
+  question.addEventListener("click", () => {
+    let q_text = question.querySelector(".question__answare");
+    let status = question.querySelector(".question__status");
+    q_text.classList.toggle("open");
+    status.classList.toggle("question__status_open");
+  });
+});
 },{"gsap":"../node_modules/gsap/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -5586,7 +5597,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62566" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53511" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

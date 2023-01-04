@@ -180,13 +180,28 @@ module.hot.accept(reloadCSS);
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\images\\0.jpg":[["0.bff370e5.jpg","assets/images/0.jpg"],"assets/images/0.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/js/config.js":[function(require,module,exports) {
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/style/skill.scss":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/style/projects.scss":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/style/faq.scss":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/js/config.js":[function(require,module,exports) {
 "use strict";
 
 require("../style/base.scss");
 require("../style/loader.scss");
 require("../style/landing.scss");
-},{"../style/base.scss":"assets/style/base.scss","../style/loader.scss":"assets/style/loader.scss","../style/landing.scss":"assets/style/landing.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+require("../style/skill.scss");
+require("../style/projects.scss");
+require("../style/faq.scss");
+},{"../style/base.scss":"assets/style/base.scss","../style/loader.scss":"assets/style/loader.scss","../style/landing.scss":"assets/style/landing.scss","../style/skill.scss":"assets/style/skill.scss","../style/projects.scss":"assets/style/projects.scss","../style/faq.scss":"assets/style/faq.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -211,7 +226,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62566" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53511" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
