@@ -1,7 +1,7 @@
 import * as THREE from "three";
 const loader = new THREE.TextureLoader();
 
-import bg1 from "../images/4.jpg";
+import bg1 from "../images/55.jpg";
 
 const three_bg = document.querySelector(".three-bg");
 const scene = new THREE.Scene();

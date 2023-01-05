@@ -42,6 +42,15 @@
     position: relative;
     width: 100%;
     height: 700px;
+    display: flex;
+    align-items: center;
+    @media (max-width: 700px) {
+      flex-direction: column;
+      img {
+        width: 100% !important;
+        right: 0 !important;
+      }
+    }
     img {
       width: 70%;
       height: 600px;
@@ -53,6 +62,10 @@
   }
   &__links {
     padding-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     button {
       color: white;
       &::after {
@@ -75,11 +88,6 @@
       gap: 5px;
     }
   }
-  @media (max-width: 1350px) {
-    & .coolCirculButton {
-      transform: translate(-14rem, -3rem);
-    }
-  }
 }
 
 .coolCirculButton {
@@ -94,7 +102,7 @@
     text {
       font-size: 32px;
       text-transform: uppercase;
-      fill: black;
+      fill: yellowgreen;
       //   filter: invert(1);
     }
   }

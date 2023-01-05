@@ -32274,63 +32274,18 @@ if (typeof window !== 'undefined') {
     window.__THREE__ = REVISION;
   }
 }
-},{}],"assets/images/55.jpg":[function(require,module,exports) {
-module.exports = "/55.d70f293f.jpg";
-},{}],"assets/js/threeBg.js":[function(require,module,exports) {
+},{}],"assets/js/shadedimage.js":[function(require,module,exports) {
 "use strict";
 
 var THREE = _interopRequireWildcard(require("three"));
-var _ = _interopRequireDefault(require("../images/55.jpg"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-const loader = new THREE.TextureLoader();
-const three_bg = document.querySelector(".three-bg");
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.1, 1000);
-const renderer = new THREE.WebGL1Renderer({
-  antialias: true
-});
-renderer.setSize(window.innerWidth, window.innerHeight);
-three_bg.appendChild(renderer.domElement);
-
-//////responcive////////
-window.addEventListener("resize", () => {
-  camera.aspect(window.innerWidth / window.innerHeight);
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth / window.innerHeight);
-});
-const geometry = new THREE.PlaneGeometry(18, 10, 15, 9);
-const material = new THREE.MeshBasicMaterial({
-  // color: 0xffff00,
-  map: loader.load(_.default)
-  // wireframe: true,
-});
-
-const plane = new THREE.Mesh(geometry, material);
-scene.add(plane);
-camera.position.z = 5;
-const count = geometry.attributes.position.count;
-const clock = new THREE.Clock();
-function animate() {
-  const time = clock.getElapsedTime();
-  for (let i = 0; i < count; i++) {
-    const x = geometry.attributes.position.getX(i);
-    const y = geometry.attributes.position.getY(i);
-    const anim1 = 0.7 * Math.sin(x * 2 + time * 0.7);
-    const anim2 = 0.25 * Math.sin(x + time * 0.7);
-    geometry.attributes.position.setZ(i, anim2);
-    geometry.computeVertexNormals();
-    geometry.attributes.position.needsUpdate = true;
+class Shaded {
+  constructor() {
+    this.container = document.querySelector(".landing");
   }
-  requestAnimationFrame(animate);
-  // torusKnot.rotation.x += 0.01;
-  // torusKnot.rotation.y += 0.01;
-
-  renderer.render(scene, camera);
 }
-animate();
-},{"three":"../node_modules/three/build/three.module.js","../images/55.jpg":"assets/images/55.jpg"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"three":"../node_modules/three/build/three.module.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -32499,5 +32454,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","assets/js/threeBg.js"], null)
-//# sourceMappingURL=/threeBg.328beae8.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","assets/js/shadedimage.js"], null)
+//# sourceMappingURL=/shadedimage.22123b04.js.map

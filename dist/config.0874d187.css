@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Passions+Conflict&family=Poppins:wght@200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600&family=Sacramento&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -47,7 +47,7 @@ svg {
   font-size: 27px;
   font-weight: 700;
 }
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Passions+Conflict&family=Poppins:wght@200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600&family=Sacramento&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -106,11 +106,10 @@ svg {
   height: 100vh;
   width: 100%;
   z-index: 99;
-  background-color: #0b134f;
+  background-image: linear-gradient(to right, pink, yellow);
   display: grid;
   place-items: center;
   font-family: "orbitron", sans-serif;
-  display: none;
 }
 .loading__box {
   position: relative;
@@ -237,7 +236,7 @@ svg {
   margin: 0 auto;
   align-items: center;
   justify-content: space-between;
-  width: 60vw;
+  width: 72vw;
 }
 .landing .header__left {
   display: flex;
@@ -389,8 +388,20 @@ svg {
 .landing .intro h4 {
   font-size: 17px;
 }
+.landing .intro .Name {
+  font-family: "Sacramento", cursive;
+  display: inline-block;
+  font-size: 7rem;
+  background-image: linear-gradient(to bottom, yellow, pink);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.landing .intro .Name:hover {
+  animation: coloredIconAnimation 0.2s infinite;
+}
 .landing .intro h1 {
-  font-size: 40px;
+  font-size: 30px;
   width: 90%;
 }
 @media (max-width: 550px) {
@@ -399,6 +410,9 @@ svg {
   }
   .landing .intro h4 {
     font-size: 25px;
+  }
+  .landing .intro .Name {
+    font-size: 4.5rem;
   }
 }
 
@@ -409,7 +423,6 @@ svg {
   width: 175px;
   height: 120px;
   background: none;
-  color: #fff;
 }
 .coolButton::before, .coolButton::after {
   position: absolute;
@@ -420,10 +433,13 @@ svg {
 }
 .coolButton span {
   mix-blend-mode: difference;
+  color: #fff;
+  font-size: 20px;
+  mix-blend-mode: hard-light;
 }
 .coolButton::before {
   content: "";
-  background: #fff;
+  background-image: linear-gradient(to right, pink, yellow);
   clip-path: path("M154.5,88.5 C131,113.5 62.5,110 30,89.5 C-2.5,69 -3.5,42 4.5,25.5 C12.5,9 33.5,-6 85,3.5 C136.5,13 178,63.5 154.5,88.5 Z");
   transition: clip-path 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55);
 }
@@ -571,6 +587,17 @@ svg {
   position: relative;
   width: 100%;
   height: 700px;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 700px) {
+  .project__img {
+    flex-direction: column;
+  }
+  .project__img img {
+    width: 100% !important;
+    right: 0 !important;
+  }
 }
 .project__img img {
   width: 70%;
@@ -582,6 +609,10 @@ svg {
 }
 .project__links {
   padding-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .project__links button {
   color: white;
@@ -604,11 +635,6 @@ svg {
     gap: 5px;
   }
 }
-@media (max-width: 1350px) {
-  .project .coolCirculButton {
-    transform: translate(-14rem, -3rem);
-  }
-}
 
 .coolCirculButton {
   position: relative;
@@ -622,7 +648,7 @@ svg {
 .coolCirculButton .textcircle text {
   font-size: 32px;
   text-transform: uppercase;
-  fill: black;
+  fill: yellowgreen;
 }
 @keyframes rotat {
   to {

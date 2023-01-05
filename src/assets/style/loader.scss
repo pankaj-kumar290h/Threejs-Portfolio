@@ -8,11 +8,12 @@
   height: 100vh;
   width: 100%;
   z-index: 99;
-  background-color: #0b134f;
+  // background-color: #0b134f;
+  background-image: linear-gradient(to right, pink, yellow);
   display: grid;
   place-items: center;
   font-family: "orbitron", sans-serif;
-  display: none;
+  // display: none;
 
   &__box {
     position: relative;

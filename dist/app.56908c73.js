@@ -5543,11 +5543,11 @@ let barInterval = setInterval(() => {
       height: "500px",
       borderRadius: "50%"
     });
-    _gsap.default.to(".loading__svg", {
-      duration: 10,
-      opacity: 1,
-      rotate: "360deg"
-    });
+    // gsap.to(".loading__svg", {
+    //   duration: 10,
+    //   opacity: 1,
+    //   rotate: "360deg",
+    // });
     _gsap.default.to(".loading__box", {
       delay: 2,
       border: "none"
@@ -5557,7 +5557,7 @@ let barInterval = setInterval(() => {
       duration: 2,
       background: "transparent",
       opacity: 0.5,
-      zIndex: 1
+      zIndex: 0
     });
   }
 }, 30);
@@ -5597,7 +5597,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53511" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57888" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
